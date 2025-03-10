@@ -1,0 +1,16 @@
+@import "material-icons/iconfont/material-icons.css";
+@import "tailwindcss";
+
+body {@apply bg-sky-100 }
+
+@layer components {
+  .btn {
+    @apply bg-[#0085d1] text-white px-3 py-2 rounded-md text-sm cursor-pointer hover:bg-[#1ea7f9];
+  }
+  .tab {
+    @apply inline-block cursor-pointer p-2 border-b-2 border-transparent hover:text-gray-600 hover:border-b-gray-300;
+  }
+  .active-tab {
+    @apply text-sky-500 border-b-2 border-b-sky-500;
+  }
+}

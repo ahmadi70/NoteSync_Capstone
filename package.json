@@ -9,11 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "material-icons": "^1.13.14",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.0.12",
     "@vitejs/plugin-vue": "^5.2.1",
+    "tailwindcss": "^4.0.12",
     "vite": "^6.2.0"
   }
 }

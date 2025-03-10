@@ -1,13 +1,18 @@
 <script setup>
-
+import MainSection from '@/components/Layout/MainSection.vue'
 </script>
 
-<template>
-  <div>
-    <h1>Overview</h1>
-  </div>
+<template> 
+  <MainSection>
+    <div class="bg-white w-full flex flex-col gap-3 p-3">
+      <div class="flex justify-between">
+        <div>Notes</div>
+        <div>Characters</div>
+      </div>
+      <div class="flex justify-between">
+        <div>2</div>
+        <div>14</div>
+      </div>
+    </div>
+  </MainSection>
 </template>
-
-<style scoped>
-
-</style>
