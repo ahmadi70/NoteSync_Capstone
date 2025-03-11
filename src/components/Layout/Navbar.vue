@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue'
 import { useOnClickOutside } from '@/use/useOnClickOutside'
 
 const isOpen = ref(false)

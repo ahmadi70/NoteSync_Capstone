@@ -1,5 +1,3 @@
-import { onMounted, onBeforeUnmount } from 'vue';
-
 export function useOnClickOutside(callback) {
   const onClickOutside = event => {
     callback(event)

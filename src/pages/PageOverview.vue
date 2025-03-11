@@ -1,6 +1,4 @@
-<script setup>
-import MainSection from '@/components/Layout/MainSection.vue'
-</script>
+<script setup></script>
 
 <template> 
   <MainSection>

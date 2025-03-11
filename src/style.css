@@ -7,6 +7,9 @@ body {@apply bg-sky-100 }
   .btn {
     @apply bg-[#0085d1] text-white px-3 py-2 rounded-md text-sm cursor-pointer hover:bg-[#1ea7f9];
   }
+  .btn-disabled {
+    @apply bg-[#94a3b8] cursor-not-allowed opacity-40;
+  }
   .tab {
     @apply inline-block cursor-pointer p-2 border-b-2 border-transparent hover:text-gray-600 hover:border-b-gray-300;
   }
