@@ -1,5 +1,6 @@
 <script setup>
 import { useDateFormat } from '@vueuse/core'
+import { useStoreNotes } from '@/stores/storeNotes'
 
 const props = defineProps({
   note: {
@@ -21,10 +22,14 @@ const dateFormated = computed(() => {
   return formatDate
 })
 
-const emit = defineEmits(['deleteClicked'])
-const handleDeleteClicked = () => {
-  emit('deleteClicked', props.note.id)
+const storeNotes = useStoreNotes()
+const deleteNote  = () => {
+  storeNotes.deleteNote(props.note.id)
 }
+
+const modals = reactive({
+  deleteNote: false
+})
 
 </script>
 
@@ -40,13 +45,18 @@ const handleDeleteClicked = () => {
     
     <div class="border-t border-gray-300 flex justify-center divide-x divide-gray-300">
       <RouterLink
-        to=""
+        :to="`/edit-note/${note.id}`"
         class="w-full py-2 cursor-pointer hover:bg-[#1ea7f9] hover:text-white text-center"
       >Edit</RouterLink>
       <button
-        @click="handleDeleteClicked"
+        @click="modals.deleteNote = true"
         class="w-full py-2 cursor-pointer hover:bg-red-600 hover:text-white"
       >Delete</button>
     </div>
+    <ModalDeleteNote
+      v-if="modals.deleteNote"
+      v-model="modals.deleteNote"
+      :noteId="note.id"
+    />
   </div>
 </template>
