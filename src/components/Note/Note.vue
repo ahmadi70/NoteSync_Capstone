@@ -16,8 +16,8 @@ const getCharacter = computed(()=> {
 })
 
 const dateFormated = computed(() => {
-  const currentDate = new Date().getTime()
-  const formatDate = useDateFormat(currentDate, 'DD-MM-YYYY @ HH:mm')
+  const date = new Date(parseInt(props.note.date))
+  const formatDate = useDateFormat(date, 'DD-MM-YYYY @ HH:mm')
 
   return formatDate
 })
