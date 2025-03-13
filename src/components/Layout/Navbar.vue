@@ -1,5 +1,8 @@
 <script setup>
 import { useOnClickOutside } from '@/use/useOnClickOutside'
+import { useStoreAuth } from '@/stores/storeAuth'
+
+const storeAuth = useStoreAuth()
 
 const isOpen = ref(false)
 
@@ -41,8 +44,10 @@ useOnClickOutside(() => {
         </li>
         <li>
           <button
+            v-if="storeAuth.user.id"
+            @click="storeAuth.logoutUser"
             class="btn bg-red-700 hover:bg-red-600 m-1"
-          >Logout</button>
+          >Logout {{ storeAuth.user.email }}</button>
         </li>
       </ul>
     </div>
