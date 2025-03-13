@@ -13,7 +13,7 @@ const storeNotes = useStoreNotes()
       </div>
       <div class="flex justify-between">
         <div>Number of Notes</div>
-        <div>{{ storeNotes.getNotes }}</div>
+        <div>{{ storeNotes.getNotesLength }}</div>
       </div>
       <div class="flex justify-between">
         <div>Number of Character (all notes)</div>
