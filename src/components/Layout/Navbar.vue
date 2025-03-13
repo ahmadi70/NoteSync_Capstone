@@ -33,6 +33,7 @@ useOnClickOutside(() => {
       </button>
 
       <ul
+        v-if="storeAuth.user.id"
         class="bg-sky-600 md:flex md:justify-end items-center md:top-0 md:border-none md:static absolute w-full top-16 left-0 shadow-md border border-white"
         :class="isOpen ? 'block' : 'hidden md:flex'"
       >
@@ -44,7 +45,6 @@ useOnClickOutside(() => {
         </li>
         <li>
           <button
-            v-if="storeAuth.user.id"
             @click="storeAuth.logoutUser"
             class="btn bg-red-700 hover:bg-red-600 m-1"
           >Logout {{ storeAuth.user.email }}</button>
