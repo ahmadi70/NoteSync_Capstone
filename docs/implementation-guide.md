@@ -156,7 +156,7 @@ createApp(App)
 
 <image src="./images/router-result.png" width='40%'>
 
-## 4. Install Pinia (State Management)
+## 4. Install Tailwind CSS
 ```sh
 pnpm install tailwindcss @tailwindcss/vite -D
 ```
